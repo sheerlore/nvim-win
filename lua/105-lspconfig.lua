@@ -8,7 +8,7 @@ vim.keymap.set('n', 'g[', vim.diagnostic.goto_prev, opts)
 vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
   vim.lsp.diagnostic.on_publish_diagnostics,
   {
-    virtual_text = false,
+    virtual_text = true,
     format = function(diagnostic)
       return string.format("%s (%s: %s)", diagnostic.message, diagnostic.source, diagnostic.code)
     end
