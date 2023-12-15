@@ -7,6 +7,7 @@ require('001-keymaps')
 require('plugins')
 require('101-lualine')
 require('102-bufferline')
+require('103-telescope')
 
 
 vim.cmd [[colorscheme tokyonight-night]]
