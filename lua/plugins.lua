@@ -25,7 +25,11 @@ return require("packer").startup(function(use)
     "nvim-telescope/telescope-file-browser.nvim",
     requires = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" }
   }
-
+  -- LSP & SERVER --
+  use "williamboman/mason.nvim"
+  use "williamboman/mason-lspconfig.nvim"
+  use "neovim/nvim-lspconfig"
+  use "jose-elias-alvarez/null-ls.nvim"
 
   -- others
   use {
