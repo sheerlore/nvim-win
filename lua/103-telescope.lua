@@ -16,14 +16,14 @@ telescope.setup {
     mappings = {
       n = {},
       i = {
-        ['<esc>'] =  actions.close
+        ['<esc>'] =  actions.close,
+        ["<C-h>"] = "which_key"
       }
     },
   },
   extensions = {
     file_browser = {
-      -- theme = "dropdown",
-      theme = "ivy",
+      theme = "dropdown",
       hijack_netrw = true,
       mappings = {
         ["i"] = {},
@@ -36,7 +36,7 @@ telescope.setup {
 telescope.load_extension("file_browser")
 local opts = { noremap = true, silent = true }
 vim.keymap.set('n', '<leader>ff', builtin.find_files, opts)
--- vim.keymap.set('n', '<leader>fg', builtin.live_grep, opts)
+vim.keymap.set('n', '<leader>fg', builtin.live_grep, opts)
 vim.keymap.set('n', '<leader>bb', builtin.buffers, opts)
 vim.keymap.set('n', '<leader>hh', builtin.help_tags, opts)
 
