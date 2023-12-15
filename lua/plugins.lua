@@ -19,7 +19,7 @@ return require("packer").startup(function(use)
   -- fuzzy finder
   use {
     "nvim-telescope/telescope.nvim",
-    requires = {"nvim-lua/plenary.nvim"}
+    requires = { "nvim-lua/plenary.nvim" }
   }
   use {
     "nvim-telescope/telescope-file-browser.nvim",
@@ -31,17 +31,27 @@ return require("packer").startup(function(use)
   use "neovim/nvim-lspconfig"
   use "jose-elias-alvarez/null-ls.nvim"
 
+  -- CMP
+  use "hrsh7th/nvim-cmp"
+  use "hrsh7th/cmp-nvim-lsp"
+  use "hrsh7th/cmp-path"
+  use "hrsh7th/cmp-buffer"
+  use "hrsh7th/cmp-cmdline"
+  use "hrsh7th/vim-vsnip"
+  use "hrsh7th/cmp-vsnip"
+  use "onsails/lspkind.nvim"
+
   -- others
   use {
     "windwp/nvim-autopairs",
     config = function()
-      require("nvim-autopairs").setup{}
+      require("nvim-autopairs").setup {}
     end
   }
   use {
     "j-hui/fidget.nvim",
     config = function()
-      require("fidget").setup{}
+      require("fidget").setup {}
     end
   }
 end)

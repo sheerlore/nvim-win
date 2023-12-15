@@ -32,7 +32,7 @@ require("mason-lspconfig").setup_handlers({ function(server_name)
     vim.keymap.set('n', 'gn', vim.lsp.buf.rename, bufopts)
     vim.keymap.set('n', 'ga', vim.lsp.buf.code_action, bufopts)
   end
-  -- opts.capabilities = require('cmp_nvim_lsp').default_capabilities()
+  opts.capabilities = require('cmp_nvim_lsp').default_capabilities()
 
   if server_name == "lua_ls" then
     opts.settings = {
