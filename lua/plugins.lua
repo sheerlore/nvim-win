@@ -25,4 +25,19 @@ return require("packer").startup(function(use)
     "nvim-telescope/telescope-file-browser.nvim",
     requires = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" }
   }
+
+
+  -- others
+  use {
+    "windwp/nvim-autopairs",
+    config = function()
+      require("nvim-autopairs").setup{}
+    end
+  }
+  use {
+    "j-hui/fidget.nvim",
+    config = function()
+      require("fidget").setup{}
+    end
+  }
 end)
