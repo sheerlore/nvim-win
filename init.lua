@@ -1,6 +1,7 @@
 -- init.lua
 
 require('000-options')
+require('001-keymaps')
 
 -- plugins
 require('plugins')
