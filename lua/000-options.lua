@@ -52,4 +52,4 @@ vim.opt.splitright = true
 vim.opt.splitbelow = true
 vim.opt.updatetime = 300
 vim.opt.encoding = "utf-8"
-vim.opt.shell = "powershell.exe"
+vim.opt.shell = "pwsh.exe"
